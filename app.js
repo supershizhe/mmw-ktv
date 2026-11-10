@@ -1,4 +1,4 @@
-const ids = ['intro', 'download', 'api', 'faq', 'releases'];
+const ids = ['intro', 'download', 'api', 'faq', 'author', 'releases'];
 function showPage() {
   const requested = decodeURIComponent(location.hash.slice(1));
   const id = ids.includes(requested) ? requested : requested.startsWith('二、') ? 'api' : 'intro';
@@ -12,7 +12,7 @@ function showPage() {
   const next = document.getElementById('next-page');
   prev.href = '#' + ids[Math.max(0, index - 1)]; prev.hidden = index === 0;
   next.href = '#' + ids[Math.min(ids.length - 1, index + 1)]; next.hidden = index === ids.length - 1;
-  document.getElementById('page-count').textContent = `0${index + 1} / 05`;
+  document.getElementById('page-count').textContent = `0${index + 1} / 06`;
   document.title = `${document.querySelector('nav a[aria-current]').textContent.slice(2).replace('↗', '').trim()} · 妙妙屋狂欢夜`;
   if (id === 'download') {
     const frame = document.querySelector('iframe');

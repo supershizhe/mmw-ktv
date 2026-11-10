@@ -1,26 +1,96 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#171126">
-  <title>妙妙屋狂欢夜</title>
-  <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; min-height: 100svh; display: grid; place-items: center; padding: 24px; color: #f6f0ff; background: radial-gradient(ellipse at 20% 0%, #4a276b 0, transparent 55%), #171126; font-family: system-ui, "Microsoft YaHei", sans-serif; }
-    main { width: min(100%, 680px); padding: clamp(32px, 7vw, 72px); border: 1px solid #ffffff24; border-radius: 28px; background: #ffffff08; box-shadow: 0 24px 80px #0004; }
-    .icon { font-size: 48px; }
-    .brand { color: #d7b7ff; font-size: 15px; letter-spacing: .12em; margin-top: 24px; }
-    h1 { font-size: clamp(40px, 9vw, 72px); line-height: 1.1; margin: 20px 0; letter-spacing: -.04em; }
-    p { color: #c5bcd3; line-height: 1.8; margin-bottom: 0; }
-  </style>
-</head>
-<body>
-  <main>
-    <span class="icon" role="img" aria-label="麦克风">🎤</span>
-    <div class="brand">妙妙屋狂欢夜</div>
-    <h1>Hello World.</h1>
-    <p>官方网站正在准备中，敬请期待。</p>
-  </main>
-</body>
-</html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#14121c"><meta name="description" content="妙妙屋狂欢夜：软件下载、使用说明、API Key 设置与版本记录。"><title>妙妙屋狂欢夜 · 使用说明</title><link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
+<body><a class="skip" href="#content">跳到正文</a><div class="shell"><aside class="sidebar"><a class="brand" href="#intro"><img src="assets/icon.png" width="54" height="54" alt="妙妙屋狂欢夜图标"><span>妙妙屋<br>狂欢夜<span class="brand-small">MMW KTV</span></span></a><div class="nav-label">使用说明</div><nav aria-label="章节"><a href="#intro" aria-current="page"><span>01</span>简介<b aria-hidden="true">↗</b></a><a href="#download"><span>02</span>下载与启动<b aria-hidden="true">↗</b></a><a href="#api"><span>03</span>API Key<b aria-hidden="true">↗</b></a><a href="#faq"><span>04</span>常见问题<b aria-hidden="true">↗</b></a><a href="#releases"><span>05</span>Release Note<b aria-hidden="true">↗</b></a></nav><div class="sidebar-footer"><span class="status-dot"></span>让今晚，尽兴一点。<a href="https://drive.google.com/drive/folders/1_f63PFUtn2ncrug4iolHpe56gbZ49L1w" target="_blank" rel="noopener noreferrer">获取软件 ↗</a></div></aside>
+<div class="main-wrap"><header><span>妙妙屋狂欢夜 <span class="muted">/ 使用指南</span></span><a class="header-link" href="https://docs.google.com/document/d/1buC0WMY0-U8dC1fSqobfM1I_JjnbhUACS2OMgKjEyjo" target="_blank" rel="noopener noreferrer">原始文档 ↗</a></header><main id="content">
+<section class="page" id="intro" aria-labelledby="intro-title"><div class="eyebrow">妙妙屋狂欢夜</div><h1 id="intro-title">把客厅，<br>变成你的主场。</h1><div class="intro-copy"><h2>简介</h2><p><strong>妙妙屋狂欢夜</strong>是一款支持 YouTube 与本地伴奏播放、手机扫码点歌、多人排队和自定义歌单的电脑 KTV 软件。</p></div><a class="primary" href="#download">下载与启动 <span>→</span></a><div class="stage" aria-hidden="true"><div class="stage-orbit"></div><div class="record"><div class="record-label"><img src="assets/icon.png" alt=""></div></div><div class="stage-caption">MMW KTV <span>LET THE NIGHT PLAY</span></div><div class="equalizer"><i style="--h:18%;--delay:0s"></i><i style="--h:55%;--delay:-0.13s"></i><i style="--h:22%;--delay:-0.26s"></i><i style="--h:59%;--delay:-0.39s"></i><i style="--h:26%;--delay:-0.52s"></i><i style="--h:63%;--delay:-0.65s"></i><i style="--h:30%;--delay:-0.78s"></i><i style="--h:67%;--delay:-0.91s"></i><i style="--h:34%;--delay:-1.04s"></i><i style="--h:71%;--delay:-1.17s"></i><i style="--h:38%;--delay:-1.3s"></i><i style="--h:75%;--delay:-1.4300000000000002s"></i><i style="--h:42%;--delay:-1.56s"></i><i style="--h:79%;--delay:-1.69s"></i><i style="--h:46%;--delay:-1.82s"></i><i style="--h:83%;--delay:-1.9500000000000002s"></i><i style="--h:50%;--delay:-2.08s"></i><i style="--h:87%;--delay:-2.21s"></i><i style="--h:54%;--delay:-2.34s"></i><i style="--h:21%;--delay:-2.47s"></i><i style="--h:58%;--delay:-2.6s"></i><i style="--h:25%;--delay:-2.73s"></i></div></div></section>
+<section class="page" id="download" aria-labelledby="download-title" hidden><div class="eyebrow">使用说明</div><h1 id="download-title">一、下载与启动</h1><div class="prose"><p>下载地址：<a href="https://drive.google.com/drive/folders/1_f63PFUtn2ncrug4iolHpe56gbZ49L1w" target="_blank" rel="noopener noreferrer">Releases</a></p>
+<ul>
+<li>请选择最新版本以防止bug。
+</li>
+<li>适用于 Windows 10/11 64 位电脑，使用 Windows 自带的 .NET Framework 4.8。
+</li>
+<li>双击运行EXE文件，浏览器会自动打开。
+</li>
+<li>默认电脑地址：http://localhost:11449/
+</li>
+<li>电脑需能访问 YouTube。如需使用搜索点歌功能，<strong>首次运行时需要设置YouTube API Key。</strong>详见 <a href="#api">二、申请并设置 API Key（用于程序内搜索）</a>。仅使用本地伴奏和直接提供YouTube链接点歌可跳过这一步。
+</li>
+<li>手机扫码点歌时需要与电脑连接同一个Wifi。
+</li></ul></div><div class="downloads-panel"><div class="panel-title"><h2>下载文件</h2><a href="https://drive.google.com/drive/folders/1_f63PFUtn2ncrug4iolHpe56gbZ49L1w" target="_blank" rel="noopener noreferrer">打开 Google Drive ↗</a></div><p class="panel-note">下方直接显示 Google Drive 文件夹内容；每次打开此页时重新加载。若列表无法显示，请直接打开文件夹。</p><iframe title="Google Drive 下载文件列表" data-src="https://drive.google.com/embeddedfolderview?id=1_f63PFUtn2ncrug4iolHpe56gbZ49L1w#list" referrerpolicy="no-referrer"></iframe></div></section>
+<section class="page" id="api" aria-labelledby="api-title" hidden><div class="eyebrow">使用说明</div><h1 id="api-title">二、申请并设置 API Key<br><span class="title-sub">（用于程序内搜索）</span></h1><div class="prose steps"><ol>
+<li>打开 <a href="https://console.cloud.google.com/" target="_blank" rel="noopener noreferrer">https://console.cloud.google.com/</a> ，创建或选择项目。
+</li>
+<li>在“API 和服务 → 库”中启用 YouTube Data API v3。
+</li>
+<li>进入“API 和服务 → 凭据 → 创建凭据 → API 密钥”。无需创建 OAuth 客户端或服务账号。
+</li>
+<li>将 API 限制为 YouTube Data API v3。本程序从电脑后端发起请求，不要配置成只接受网站 Referer 的密钥。
+</li>
+<li>首次启动程序时填写准备好的API Key，下次启动会自动加载，无需重复填写。之后需要更改时，在电脑页面右上角“设置”中输入新的 Key 并保存。
+</li></ol>
+<p><strong>* 不要把自己的密钥或配置文件上传到公共下载文件夹。</strong></p></div></section>
+<section class="page" id="faq" aria-labelledby="faq-title" hidden><div class="eyebrow">使用说明</div><h1 id="faq-title">三、常见问题</h1><div class="prose faq-copy"><ol>
+<li>软件默认运行在11449端口。如需临时更换软件运行端口或端口已占用，可退出程序，在 EXE 所在文件夹中创建 UTF-8 文本文件 <em>mmwktv-port.txt</em>，仅填入 1–65535 的可用端口号，保存后重新启动。
+</li>
+<li>如有更多问题请在 <a href="https://docs.google.com/document/d/19CPxHBLVA2JO-ZCQRuz-JMoyLHn3nUnB1-cINCvvXuI/edit?tab=t.0" target="_blank" rel="noopener noreferrer">ContactMe</a> 中记录，作者会不定期查看、回复和更新~
+</li></ol></div></section>
+<section class="page" id="releases" aria-labelledby="releases-title" hidden><div class="eyebrow">Release Note</div><h1 id="releases-title">Release Note</h1><div class="prose release-copy"><h3>测试版</h3>
+<ul>
+<li>0.0.1
+<ul>
+<li>本地KTV运行
+</li>
+<li>Youtube search - by api key directly
+</li>
+<li>手机扫码点歌台
+</li>
+<li>已点队列、重新排序、置顶、删除
+</li>
+<li>歌曲屏幕全屏
+</li>
+<li>重新加载视频
+</li>
+<li>Youtube视频链接直接加入队列
+</li>
+<li>设置页面
+</li></ul>
+</li>
+<li>0.0.2
+<ul>
+<li>全局全屏
+</li>
+<li>空列表点歌时自动播放
+</li>
+<li>已唱列表和重唱
+</li>
+<li>预载歌单、新建歌单
+</li>
+<li>Bug fixes 和 UI 优化
+</li></ul>
+</li>
+<li>0.1.0
+<ul>
+<li>配置和数据文件现在存在APP data文件夹，而不是新建文件
+</li>
+<li>支持使用本地MP3或MP4伴奏
+</li>
+<li>支持歌单管理移除歌曲
+</li></ul>
+</li></ul>
+<h3>正式版</h3>
+<ul>
+<li>1.0.0
+<ul>
+<li>加入帮助页面
+</li>
+<li>加入port override功能以防止端口占用
+</li>
+<li>Minor bug fixes 和 UI优化
+</li></ul>
+</li>
+<li>1.0.1
+<ul>
+<li>优化了UI界面
+</li></ul>
+</li></ul></div></section>
+<div class="page-navigation"><a id="previous-page" href="#intro">← 上一页</a><span id="page-count">01 / 05</span><a id="next-page" href="#download">下一页 →</a></div></main><footer>妙妙屋狂欢夜 <span>为每一场尽兴的相聚。</span></footer></div></div></body></html>

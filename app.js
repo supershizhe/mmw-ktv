@@ -13,7 +13,9 @@ function showPage() {
   prev.href = '#' + ids[Math.max(0, index - 1)]; prev.hidden = index === 0;
   next.href = '#' + ids[Math.min(ids.length - 1, index + 1)]; next.hidden = index === ids.length - 1;
   document.getElementById('page-count').textContent = `0${index + 1} / 06`;
-  document.title = `${document.querySelector('nav a[aria-current]').textContent.slice(2).replace('↗', '').trim()} · 妙妙屋狂欢夜`;
+  const pageTitle = document.querySelector('nav a[aria-current]').textContent.slice(2).replace('↗', '').trim();
+  document.getElementById('current-page-title').textContent = pageTitle;
+  document.title = `${pageTitle} · 妙妙屋狂欢夜`;
   if (id === 'download') {
     const frame = document.querySelector('iframe');
     frame.src = frame.dataset.src;

@@ -11,8 +11,10 @@
 下载地址：[Releases](https://drive.google.com/drive/folders/1_f63PFUtn2ncrug4iolHpe56gbZ49L1w)
 
 * 请选择最新版本以防止bug。  
-* 适用于 Windows 10/11 64 位电脑，使用 Windows 自带的 .NET Framework 4.8。  
-* 双击运行EXE文件，浏览器会自动打开。  
+* 适用于 Windows 10/11 64 位电脑（需 .NET Framework 4.8），以及运行 macOS 13.5 或更新版本的 Apple Silicon 和 Intel Mac。
+  * Mac 版暂不支持扫码加入 Wi-Fi，也不能通过应用旁的端口文件临时覆盖端口。扫码点歌仍可使用。
+  * 在 Mac 上打开「苹果菜单 → 关于本机」。若「芯片」显示 Apple M 系列，下载 Apple Silicon（ARM64）版。若「处理器」显示 Intel，下载 Intel（x64）版。
+* Windows 双击运行 EXE。Mac 打开 DMG，把应用拖入「应用程序」后启动。启动后浏览器会自动打开。
 * 默认电脑地址：http\://localhost:11449/  
 * 电脑需能访问 YouTube。如需使用搜索点歌功能，**首次运行时需要设置YouTube API Key。**详见 [二、申请并设置 API Key（用于程序内搜索）](#二、申请并设置-api-key（用于程序内搜索）)。仅使用本地伴奏和直接提供YouTube链接点歌可跳过这一步。  
 * 手机扫码点歌时需要与电脑连接同一个Wifi。

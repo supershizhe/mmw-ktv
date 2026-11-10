@@ -1,4 +1,15 @@
 const ids = ['intro', 'features', 'download', 'api', 'faq', 'author', 'releases'];
+const downloadPlatform = document.getElementById('download-platform');
+function loadDownloads() {
+  const folder = document.getElementById('drive-folder');
+  const frame = document.getElementById('download-list');
+  const platform = downloadPlatform.value;
+  folder.href = folder.dataset[platform];
+  const id = new URL(folder.href).pathname.split('/').at(-1);
+  frame.title = (platform === 'mac' ? 'Mac' : 'Windows') + ' 下载文件列表';
+  frame.src = 'https://drive.google.com/embeddedfolderview?id=' + id + '#list';
+}
+downloadPlatform.addEventListener('change', loadDownloads);
 function showPage() {
   const requested = decodeURIComponent(location.hash.slice(1));
   const id = ids.includes(requested) ? requested : requested.startsWith('二、') ? 'api' : 'intro';
@@ -16,10 +27,7 @@ function showPage() {
   const pageTitle = document.querySelector('nav a[aria-current]').textContent.slice(2).replace('↗', '').trim();
   document.getElementById('current-page-title').textContent = pageTitle;
   document.title = `${pageTitle} · 妙妙屋狂欢夜`;
-  if (id === 'download') {
-    const frame = document.querySelector('iframe');
-    frame.src = frame.dataset.src;
-  }
+  if (id === 'download') loadDownloads();
   window.scrollTo(0, 0);
 }
 window.addEventListener('hashchange', showPage);

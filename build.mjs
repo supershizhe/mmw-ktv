@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import {createHash} from 'node:crypto';
 
 // Keep the original export; apply the requested website-specific edits below.
 const source = fs.readFileSync(new URL('./guide.md', import.meta.url), 'utf8');
@@ -57,8 +58,9 @@ const releases = releaseGroups.sort((a,b) => (a[1] === '正式版' ? -1 : 1) - (
 const folder = 'https://drive.google.com/drive/folders/1_f63PFUtn2ncrug4iolHpe56gbZ49L1w';
 const tabs = [['intro','简介','01'],['download','下载与启动','02'],['api','API Key','03'],['faq','常见问题','04'],['author','作者简介','05'],['releases','Release Note','06']];
 const page = (id, title, body, extra = '') => `<section class="page" id="${id}" aria-labelledby="${id}-title"${id === 'intro' ? '' : ' hidden'}><div class="eyebrow">${id === 'intro' ? '妙妙屋狂欢夜' : id === 'releases' ? 'Release Note' : '使用说明'}</div><h1 id="${id}-title">${title}</h1>${body}${extra}</section>`;
+const assetVersion = name => createHash('sha256').update(fs.readFileSync(new URL(name, import.meta.url))).digest('hex').slice(0,10);
 const html = `<!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#14121c"><meta name="description" content="妙妙屋狂欢夜：软件下载、使用说明、API Key 设置与版本记录。"><title>妙妙屋狂欢夜 · 使用说明</title><link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#14121c"><meta name="description" content="妙妙屋狂欢夜：软件下载、使用说明、API Key 设置与版本记录。"><title>妙妙屋狂欢夜 · 使用说明</title><link rel="icon" href="assets/icon.png"><link rel="stylesheet" href="style.css?v=${assetVersion('./style.css')}"><script src="app.js?v=${assetVersion('./app.js')}" defer></script></head>
 <body><a class="skip" href="#content">跳到正文</a><div class="shell"><aside class="sidebar"><a class="brand" href="#intro"><img src="assets/icon.png" width="54" height="54" alt="妙妙屋狂欢夜图标"><span>妙妙屋<br>狂欢夜<span class="brand-small">MMW KTV</span></span></a><div class="nav-label">使用说明</div><nav aria-label="章节">${tabs.map(([id,title,n]) => `<a href="#${id}"${id === 'intro' ? ' aria-current="page"' : ''}><span>${n}</span>${title}<b aria-hidden="true">↗</b></a>`).join('')}</nav><div class="sidebar-footer"><span class="status-dot"></span>让今晚，尽兴一点。<a href="${folder}" target="_blank" rel="noopener noreferrer">获取软件 ↗</a></div></aside>
 <div class="main-wrap"><header><span>妙妙屋狂欢夜 <span class="muted">/ 使用指南</span></span></header><main id="content">
 ${page('intro','把客厅，<br>变成你的主场。',`<div class="intro-copy"><h2>简介</h2>${markdown(intro)}</div><a class="primary" href="#download">下载与启动 <span>→</span></a><div class="stage" aria-hidden="true"><div class="stage-orbit"></div><div class="record"><div class="record-label"><img src="assets/icon.png" alt=""></div></div><div class="stage-caption">MMW KTV <span>LET THE NIGHT PLAY</span></div><div class="equalizer">${Array.from({length:22},(_,i)=>`<i style="--h:${18+((i*37)%70)}%;--delay:${i*-.13}s"></i>`).join('')}</div></div>`)}

@@ -30,7 +30,8 @@
 ### 三、常见问题
 
 1. 软件默认运行在11449端口。如需临时更换软件运行端口或端口已占用，可退出程序，在 EXE 所在文件夹中创建 UTF-8 文本文件 *mmwktv-port.txt*，仅填入 1–65535 的可用端口号，保存后重新启动。  
-2. 如有更多问题请在 [ContactMe](https://docs.google.com/document/d/19CPxHBLVA2JO-ZCQRuz-JMoyLHn3nUnB1-cINCvvXuI/edit?tab=t.0) 中记录，作者会不定期查看、回复和更新\~
+2. 当软件被 Smart App Control 阻拦时：确认软件来源可信后，可尝试在 Windows 安全中心设置中关闭（disable）Smart App Control。关闭会降低对其他不受信任应用的防护，并非只允许本软件运行；请先阅读[微软官方说明](https://support.microsoft.com/en-us/windows/security/threat-malware-protection/smart-app-control-frequently-asked-questions#bkmk_unknown)，再自行决定。  
+3. 如有更多问题请在 [ContactMe](https://docs.google.com/document/d/19CPxHBLVA2JO-ZCQRuz-JMoyLHn3nUnB1-cINCvvXuI/edit?tab=t.0) 中记录，作者会不定期查看、回复和更新\~
 
 # 
 
@@ -66,3 +67,7 @@
   - Minor bug fixes 和 UI优化  
 - 1.0.1  
   - 优化了UI界面
+- 1.0.4  
+  - 二维码加入WiFi  
+  - 更新说明和帮助页面  
+  - Minor UI bug fixes

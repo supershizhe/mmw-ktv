@@ -1,4 +1,4 @@
-const ids = ['intro', 'features', 'download', 'api', 'faq', 'author', 'releases'];
+const ids = ['intro', 'features', 'author', 'download', 'api', 'faq', 'releases'];
 const downloadPlatform = document.getElementById('download-platform');
 function loadDownloads() {
   const folder = document.getElementById('drive-folder');

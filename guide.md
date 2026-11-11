@@ -34,7 +34,7 @@
 
 1. 软件默认运行在11449端口。如需临时更换软件运行端口或端口已占用，可退出程序，在 EXE 所在文件夹中创建 UTF-8 文本文件 *mmwktv-port.txt*，仅填入 1–65535 的可用端口号，保存后重新启动。  
 2. Windows启动时，当软件被 Smart App Control 阻拦时：确认软件来源可信后，可尝试在 Windows 安全中心设置中关闭（disable）Smart App Control。关闭会降低对其他不受信任应用的防护，并非只允许本软件运行；请先阅读[微软官方说明](https://support.microsoft.com/en-us/windows/security/threat-malware-protection/smart-app-control-frequently-asked-questions#bkmk_unknown)，再自行决定。
-3. Mac 启动时，如果系统提示无法验证开发者，先确认安装包来源可信。尝试打开应用后，进入「系统设置（System Settings）」→「隐私与安全性（Privacy & Security）」，向下滚动到页面底部的「安全性（Security）」区域，点击「仍要打开（Open Anyway）」，按提示验证身份并确认打开。该按钮通常在尝试打开应用后约一小时内可用。参见 [Apple 官方说明](https://support.apple.com/en-us/102445)。
+3. Mac 启动时，如果系统提示无法验证开发者或软件是否安全是否有病毒，导致无法打开时：先确认安装包来源可信。尝试打开应用后，进入「系统设置（System Settings）」→「隐私与安全性（Privacy & Security）」，向下滚动到页面底部的「安全性（Security）」区域，找到被拦截的「妙妙屋狂欢夜」软件，点击「仍要打开（Open Anyway）」，按提示验证身份并确认后重新尝试打开软件。该按钮通常在尝试打开应用后约一小时内可用。参见 [Apple 官方说明](https://support.apple.com/en-us/102445)。
 4. 如有更多问题请在 [ContactMe](https://docs.google.com/document/d/19CPxHBLVA2JO-ZCQRuz-JMoyLHn3nUnB1-cINCvvXuI/edit?tab=t.0) 中记录，作者会不定期查看、回复和更新\~
 
 # 
